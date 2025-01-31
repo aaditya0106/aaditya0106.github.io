@@ -34,7 +34,7 @@ export default function ExperienceCard({ workExperiences, isDark }) {
     }
   );
 
-  const tags = document.querySelectorAll('timeline-item');
+  const tags = document.querySelectorAll('.timeline-item');
   tags.forEach(tag => {
     observer.observe(tag);
   });

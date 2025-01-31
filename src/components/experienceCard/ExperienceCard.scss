@@ -131,8 +131,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: 'contain';
-  background-position: 'left';
+  background-size: 'contain' !important;
+  background-position: 'left' !important;
   background-repeat: no-repeat;
   width: 30%;
   height: 100%;
