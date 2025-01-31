@@ -5,13 +5,13 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  function openUrlInNewTab(url) {
-    if (!url) {
-      return;
-    }
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
+  // function openUrlInNewTab(url) {
+  //   if (!url) {
+  //     return;
+  //   }
+  //   var win = window.open(url, "_blank");
+  //   win.focus();
+  // }
 
   const GetDescBullets = ({ descBullets, isDark }) => {
     return descBullets
@@ -66,10 +66,11 @@ export default function StartupProject() {
                     </div>
                   ) : null}
                   <div className="project-detail">
-                    <h5
-                      className={isDark ? "dark-mode card-title" : "card-title"}
-                    >
+                    <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
                       {project.projectName}
+                      <a href={project.gitUrl} target="_blank" rel="noreferrer" style={{"text-decoration":"none"}}>
+                        {project.gitUrl === '#' ? "" : " 🔗"}
+                      </a>
                     </h5>
                     <ul
                       className={
@@ -90,7 +91,7 @@ export default function StartupProject() {
                               className={
                                 isDark ? "dark-mode project-tag" : "project-tag"
                               }
-                              onClick={() => openUrlInNewTab(link.url)}
+                              //onClick={() => openUrlInNewTab(link.url)}
                             >
                               {link.name}
                             </span>

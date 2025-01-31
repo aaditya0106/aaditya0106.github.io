@@ -108,6 +108,9 @@ const educationInfo = {
       duration: "September 2024 - March 2026",
       desc: "",
       descBullets: [
+        "DATA 557: Applied Statistics and Experimental Design",
+        "CSE 577:  Computer Vision (Medical Image Analysis)",
+        "STAT 538: Convex Optimization",
         "DATA 556: Introduction to Statistics and Probability",
       ]
     },
@@ -157,6 +160,18 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   
   experience: [
+    {
+      title: "Graduate Research Assistant",
+      company: "Laboratory for Auditory Neuroscience and Development",
+      company_url: "https://sites.uw.edu/landlab/",
+      logo_path: require("./assets/images/uwmedicine-neuro-logo.png"),
+      duration: "Dec 2024 – Present",
+      location: "Seattle, WA",
+      description: "",
+      descPoints: [
+        "Conducting research on Multivariate Temporal Response Function (mTRF) by processing EEG signals and leveraging NLP techniques to decode neural responses to stimuli.",
+      ],
+    },
     {
       title: "Quantitative Research Associate",
       company: "JPMorgan Chase & Co.",
@@ -235,6 +250,23 @@ const bigProjects = {
   projects: [
     {
       //image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "Apartment Recommendation System",
+      projectDesc: [
+        "This project won first prize in the annual Data Science Hackathon 2025.",
+        "The goal was to build an recommendation system for the Greater Seattle Area.",
+        "Applied optimization techniques and collaborative filtering to suggest top-rated apartments based on multiple factors."
+      ],
+      footerLink: [
+        { name: "Python", url: "" },
+        { name: "Streamlit", url: "" },
+        { name: "Optimization Techniques", url: "" },
+        { name: "RecSys", url: "" },
+        //  you can add extra buttons here.
+      ],
+      gitUrl: "https://github.com/ridswnt10/ds_hackathon_2025"
+    },
+    {
+      //image: require("./assets/images/saayaHealthLogo.webp"),
       projectName: "Centralized Intelligent Surveillance System",
       projectDesc: [
         "Developed a real-time suspicious activity detection system, automating alerts to relevant authorities for prompt response in cases of accidents, explosions, and more.",
@@ -244,8 +276,8 @@ const bigProjects = {
         { name: "Python", url: "" },
         { name: "OpenCV", url: "" },
         { name: "Keras", url: "" },
-        //  you can add extra buttons here.
-      ]
+      ],
+      gitUrl: "#"
     },
     {
       projectName: "Sketch To Website",
@@ -258,7 +290,8 @@ const bigProjects = {
         { name: "Tensorflow", url: "" },
         { name: "HTML", url: "" },
         { name: "CSS", url: "" },
-      ]
+      ],
+      gitUrl: "#"
     },
     {
       projectName: "Real-Time Heart Rate Measurement from Smart Phone Camera",
@@ -269,7 +302,8 @@ const bigProjects = {
       footerLink: [
         { name: "Python", url: "" },
         { name: "OpenCV", url: "" },
-      ]
+      ],
+      gitUrl: "#"
     },
     {
       projectName: "assignMENTOR",
@@ -286,21 +320,23 @@ const bigProjects = {
         { name: "Paper.js", url: "" },
         { name: "HTML", url: "" },
         { name: "CSS", url: "" },
-      ]
-    },
-    {
-      projectName: "Voting Database Management",
-      projectDesc: [
-        "Developed an intuitive GUI and leveraged SQL to manage and track votes, optimizing user participation throughout the event.",
-        "Announced winners based on real-time data at the event's conclusion.",
       ],
-      footerLink: [
-        { name: "Python", url: "" },
-        { name: "JavaScript", url: "" },
-        { name: "ReactJs", url: "" },
-        { name: "SQL", url: "" },
-      ]
+      gitUrl: "#"
     },
+    // {
+    //   projectName: "Voting Database Management",
+    //   projectDesc: [
+    //     "Developed an intuitive GUI and leveraged SQL to manage and track votes, optimizing user participation throughout the event.",
+    //     "Announced winners based on real-time data at the event's conclusion.",
+    //   ],
+    //   footerLink: [
+    //     { name: "Python", url: "" },
+    //     { name: "JavaScript", url: "" },
+    //     { name: "ReactJs", url: "" },
+    //     { name: "SQL", url: "" },
+    //   ],
+    //   gitUrl: "#",
+    // },
   ],
   display: true // Set false to hide this section, defaults to true
 };
