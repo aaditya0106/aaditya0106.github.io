@@ -108,10 +108,13 @@ const educationInfo = {
       duration: "September 2024 - March 2026",
       desc: "",
       descBullets: [
-        "DATA 557: Applied Statistics and Experimental Design",
-        "CSE 577:  Computer Vision (Medical Image Analysis)",
+        "CSE 577: Computer Vision (Medical Image Analysis)",
+        "CSE 541: Interactive Learning",
+        "CSE 599K: LLM Serving Systems",
         "STAT 538: Convex Optimization",
-        "DATA 556: Introduction to Statistics and Probability",
+        // "DATA 556: Introduction to Statistics and Probability",
+        "DATA 557: Applied Statistics and Experimental Design",
+        "DATA 558: Statistical Machine Learning",
       ]
     },
     {
@@ -161,6 +164,16 @@ const workExperiences = {
   
   experience: [
     {
+      title: "Data Science Intern",
+      company: "Databricks",
+      company_url: "https://www.databricks.com",
+      logo_path: require("./assets/images/databricks.png"),
+      duration: "Jun 2025 – Sep 2025",
+      location: "Mountain View, CA",
+      description: "",
+      descPoints: [],
+    },
+    {
       title: "Graduate Research Assistant",
       company: "Laboratory for Auditory Neuroscience and Development",
       company_url: "https://sites.uw.edu/landlab/",
@@ -170,6 +183,7 @@ const workExperiences = {
       description: "",
       descPoints: [
         "Conducting research on Multivariate Temporal Response Function (mTRF) by processing EEG signals and leveraging NLP techniques to decode neural responses to stimuli.",
+        "Applied mTRF modeling on EEG data to examine cortical tracking of speech features in infants and adults, investigating bilingual advantages in third-language processing.",
       ],
     },
     {
@@ -249,7 +263,19 @@ const bigProjects = {
   subtitle: "BUILDING COOL STUFF WHEN NO ONE'S WATCHING!",
   projects: [
     {
-      //image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "MRI to PET Image Synthesis",
+      projectDesc: [
+        "It is developed to overcome the limitations of PET scans, such as radiation exposure, cost, and limited availability",
+        "Developed a Stochastic Differential Equation (VESDE) based Diffusion Model with U-Net architecture to transform MRI scans into PET images.",
+      ],
+      footerLink: [
+        { name: "Python", url: "" },
+        { name: "Tensorflow", url: "" },
+        { name: "OpenCV", url: "" },
+      ],
+      gitUrl: "https://github.com/aaditya0106/mri-to-pet-image-synthesis",
+    },
+    {
       projectName: "Apartment Recommendation System",
       projectDesc: [
         "This project won first prize in the annual Data Science Hackathon 2025.",
@@ -261,12 +287,10 @@ const bigProjects = {
         { name: "Streamlit", url: "" },
         { name: "Optimization Techniques", url: "" },
         { name: "RecSys", url: "" },
-        //  you can add extra buttons here.
       ],
       gitUrl: "https://github.com/ridswnt10/ds_hackathon_2025"
     },
     {
-      //image: require("./assets/images/saayaHealthLogo.webp"),
       projectName: "Centralized Intelligent Surveillance System",
       projectDesc: [
         "Developed a real-time suspicious activity detection system, automating alerts to relevant authorities for prompt response in cases of accidents, explosions, and more.",
@@ -275,7 +299,7 @@ const bigProjects = {
       footerLink: [
         { name: "Python", url: "" },
         { name: "OpenCV", url: "" },
-        { name: "Keras", url: "" },
+        { name: "Tensorflow", url: "" },
       ],
       gitUrl: "#"
     },
