@@ -18,7 +18,7 @@ export default function ExperienceCard({ workExperiences, isDark }) {
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.array.forEach(entry => {
+      entries.forEach(entry => {
         if(entry.isIntersecting) {
           entry.target.classList.add('in-view');
           entry.target.classList.remove('not-in-view');
@@ -62,41 +62,98 @@ export default function ExperienceCard({ workExperiences, isDark }) {
               </a>
             </div>
             <div className="experience-text-details">
-                <div className="experience-text-title">
-                  <h4
+              {cardInfo.subExperiences ? (
+                cardInfo.subExperiences.map((subExp, i) => (
+                  <div key={i} className="sub-experience-section" style={{marginBottom: i < cardInfo.subExperiences.length - 1 ? '20px' : '0'}}>
+                     <div className="experience-text-title">
+                      <h4
+                        className={
+                          isDark
+                            ? "experience-text-role dark-mode-text"
+                            : "experience-text-role"
+                        }
+                      >
+                        {subExp.title}
+                      </h4>
+                      <div className="experience-text-details-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                        <h5
+                          className={
+                            isDark
+                              ? "experience-text-date dark-mode-text"
+                              : "experience-text-date"
+                          }
+                          style={{ margin: 0 }}
+                        >
+                          {subExp.location}
+                        </h5>
+                        <h5
+                          className={
+                            isDark
+                              ? "experience-text-date dark-mode-text"
+                              : "experience-text-date"
+                          }
+                          style={{ margin: 0 }}
+                        >
+                          {subExp.duration}
+                        </h5>
+                      </div>
+                    </div>
+                    <p
+                      className={
+                        isDark
+                          ? "subTitle experience-text-desc dark-mode-text"
+                          : "subTitle experience-text-desc"
+                      }
+                    >
+                      {subExp.description}
+                    </p>
+                    <ul>
+                      <GetDescBullets
+                        descBullets={subExp.descPoints}
+                        isDark={isDark}
+                      />
+                    </ul>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <div className="experience-text-title">
+                    <h4
+                      className={
+                        isDark
+                          ? "experience-text-role dark-mode-text"
+                          : "experience-text-role"
+                      }
+                    >
+                      {cardInfo.title}
+                    </h4>
+                    <h5
+                      className={
+                        isDark
+                          ? "experience-text-date dark-mode-text"
+                          : "experience-text-date"
+                      }
+                    >
+                      {cardInfo.duration}
+                    </h5>
+                  </div>
+                  <p
                     className={
                       isDark
-                        ? "experience-text-role dark-mode-text"
-                        : "experience-text-role"
+                        ? "subTitle experience-text-desc dark-mode-text"
+                        : "subTitle experience-text-desc"
                     }
                   >
-                    {cardInfo.title}
-                  </h4>
-                  <h5
-                    className={
-                      isDark
-                        ? "experience-text-date dark-mode-text"
-                        : "experience-text-date"
-                    }
-                  >
-                    {cardInfo.duration}
-                  </h5>
-              </div>
-              <p
-                className={
-                  isDark
-                    ? "subTitle experience-text-desc dark-mode-text"
-                    : "subTitle experience-text-desc"
-                }
-              >
-                {cardInfo.desc}
-              </p>
-              <ul>
-                <GetDescBullets
-                  descBullets={cardInfo.descPoints}
-                  isDark={isDark}
-                />
-              </ul>
+                    {cardInfo.desc}
+                  </p>
+                  <ul>
+                    <GetDescBullets
+                      descBullets={cardInfo.descPoints}
+                      isDark={isDark}
+                    />
+                  </ul>
+                </>
+              )}
             </div>
           </div>
         </div>

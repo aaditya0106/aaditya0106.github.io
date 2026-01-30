@@ -18,7 +18,6 @@
   line-height: 1.5rem;
 }
 .project-card {
-  flex: 0 1 calc(46% - 1rem);
   flex-direction: column;
   display: flex;
   background-color: $lightBackground2;
@@ -60,11 +59,9 @@
 }
 
 .projects-container {
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .project-card-footer span.project-tag {
@@ -90,7 +87,13 @@
     font-size: 16px;
     text-align: center;
   }
-  .project-card {
-    flex: 0 1 100%;
+  .projects-container {
+    grid-template-columns: 1fr;
   }
+}
+
+.blog-more-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
