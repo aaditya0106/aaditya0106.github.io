@@ -1,10 +1,21 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import Button from "../../components/button/Button";
 
 export default function StartupProject() {
+  const [limit, setLimit] = useState(4); // Show first 4 projects (2 rows) initially
+
+  function showMore() {
+    setLimit(bigProjects.projects.length);
+  }
+
+  function showLess() {
+    setLimit(4);
+  }
+
   // function openUrlInNewTab(url) {
   //   if (!url) {
   //     return;
@@ -46,7 +57,7 @@ export default function StartupProject() {
           </p>
 
           <div className="projects-container">
-            {bigProjects.projects.map((project, i) => {
+            {bigProjects.projects.slice(0, limit).map((project, i) => {
               return (
                 <div
                   key={i}
@@ -103,6 +114,14 @@ export default function StartupProject() {
                 </div>
               );
             })}
+          </div>
+          <div className="blog-more-div">
+            {limit < bigProjects.projects.length && (
+              <Button text="Show More" newTab={false} onClick={showMore} />
+            )}
+            {limit > 4 && (
+              <Button text="Show Less" newTab={false} onClick={showLess} />
+            )}
           </div>
         </div>
       </div>

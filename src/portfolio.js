@@ -5,28 +5,33 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
-<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+/>;
 
 // Splash Screen
 
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000, // Set animation duration as per your animation
 };
 
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true, // Set to false to use static SVG
 };
 
 const greeting = {
   username: "Aaditya Chopra",
   title: "Hi, I'm Aaditya",
-  subTitle:  "I am a Data Science graduate student with good mathematics background who loves to research, learn, and implement things in daily life wherever possible.",
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true
+  subTitle:
+    "I am a Data Science graduate student with good mathematics background who loves to research, learn, and implement things in daily life wherever possible.",
+  resumeLink: require("./assets/Aaditya_Resume.pdf"), // Set to empty to hide the button
+  displayGreeting: true,
 };
 
 // Social Media Links
@@ -38,7 +43,7 @@ const socialMediaLinks = {
   instagram: "https://www.instagram.com/_aaditya_chopra/",
   flickr: "https://www.flickr.com/photos/201510706@N02/",
   // To customize icons and social links, tweak src/components/SocialMedia
-  display: true
+  display: true,
 };
 
 // Skills Section
@@ -47,9 +52,9 @@ const skillsSection = {
   title: "What do I do",
   subTitle: "",
   skills: [
-    "I’m a passionate Data Scientist with expertise in developing data-driven solutions and optimizing systems. With hands-on experience in Python, C++, and JavaScript, I specialize in solving complex problems using predictive modeling, statistical analysis, and automation.",
+    "I'm a passionate Data Scientist with expertise in developing data-driven solutions and optimizing systems. With hands-on experience in Python, C++, and JavaScript, I specialize in solving complex problems using predictive modeling, statistical analysis, and automation.",
     "My background includes working on large-scale financial data, developing automated tools to enhance efficiency, and creating scalable solutions in fast-paced environments.",
-    "I have consistently performed at a high level throughout my career, delivering projects that streamline processes, reduce risks, and improve decision-making for global financial institutions. I thrive in collaborative, dynamic teams and love tackling new challenges that push the boundaries of technology and innovation."
+    "I have consistently performed at a high level throughout my career, delivering projects that streamline processes, reduce risks, and improve decision-making for global financial institutions. I thrive in collaborative, dynamic teams and love tackling new challenges that push the boundaries of technology and innovation.",
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -58,42 +63,38 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "Python",
-      fontAwesomeClassname: "fab fa-python"
+      fontAwesomeClassname: "fab fa-python",
     },
     {
-      skillName: "C",
-      fontAwesomeClassname: "devicon-c-plain"
+      skillName: "PyTorch",
+      fontAwesomeClassname: "devicon-pytorch-original",
     },
     {
-      skillName: "C++",
-      fontAwesomeClassname: "devicon-cplusplus-plain"
+      skillName: "PySpark",
+      fontAwesomeClassname: "devicon-apachespark-original",
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      skillName: "Generative AI / LLMs",
+      fontAwesomeClassname: "fas fa-brain",
     },
     {
-      skillName: "TypeScript",
-      fontAwesomeClassname: "devicon-typescript-plain"
+      skillName: "AWS",
+      fontAwesomeClassname: "fab fa-aws",
     },
     {
-      skillName: "ReactJs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "HTML",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "CSS",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker",
     },
     {
       skillName: "SQL",
-      fontAwesomeClassname: "fas fa-database"
+      fontAwesomeClassname: "fas fa-database",
+    },
+    {
+      skillName: "C++",
+      fontAwesomeClassname: "devicon-cplusplus-plain",
     },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Education Section
@@ -115,7 +116,9 @@ const educationInfo = {
         // "DATA 556: Introduction to Statistics and Probability",
         "DATA 557: Applied Statistics and Experimental Design",
         "DATA 558: Statistical Machine Learning",
-      ]
+        "DATA 512: Human Centered Data Science",
+        "DATA 516: Scalable Data Systems and Algorithms",
+      ],
     },
     {
       schoolName: "Thapar Institute of Engineering and Technology, India",
@@ -131,9 +134,9 @@ const educationInfo = {
         "UCS 615: Image Processing",
         "UCS 616: Advanced Data Structures and Algorithms",
         "UMA 066: Graph Theory and Applications",
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };
 
 // Your top 3 proficient stacks/tech experience
@@ -143,106 +146,137 @@ const techStack = {
   experience: [
     {
       Stack: "Pyhton", //Insert stack or technology you have experience in
-      progressPercentage: "98%" //Insert relative proficiency in percentage
+      progressPercentage: "98%", //Insert relative proficiency in percentage
     },
     {
       Stack: "C++",
-      progressPercentage: "80%"
+      progressPercentage: "80%",
     },
     {
       Stack: "Web Development",
-      progressPercentage: "60%"
-    }
+      progressPercentage: "60%",
+    },
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
 // Work experience section
 
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
-  
+
   experience: [
     {
-      title: "Data Science Intern",
+      company: "Corvic.ai",
+      company_url: "https://www.corvic.ai",
+      logo_path: require("./assets/images/corvic.jpg"),
+      subExperiences: [
+        {
+          title: "Machine Learning Engineer Intern",
+          duration: "Sep 2025 – Dec 2025",
+          location: "Remote, USA",
+          description: "",
+          descPoints: [
+            "Architected LLM-powered AI agent orchestrator for autonomous multi-step reasoning, implementing tool-calling validation, reflection loops, and chain-of-action generation enabling zero-shot data analysis across enterprise datasets; outperformed vanilla GPT-4, Reflexion, and LangChain on reasoning and Q&A benchmarks.",
+            "Engineered multi-modal image embedding pipeline with CLIP-ViT and SigLIP2 through Temporal workflows, optimizing batched vector generation that reduced embedding latency by 60% while processing 10K+ images daily.",
+          ],
+        },
+      ],
+    },
+    {
       company: "Databricks",
       company_url: "https://www.databricks.com",
       logo_path: require("./assets/images/databricks.png"),
-      duration: "Jun 2025 – Sep 2025",
-      location: "Mountain View, CA",
-      description: "",
-      descPoints: [],
+      subExperiences: [
+        {
+          title: "Data Science Intern",
+          duration: "Jun 2025 – Sep 2025",
+          location: "Mountain View, CA",
+          description: "",
+          descPoints: [
+            "Developed anomaly detection model to flag storage, compute, and network abuse in community edition accounts.",
+            "Co-designed a Neo4j property graph for Trust & Safety signals, enabled multi-hop path queries and GDS community detection, cutting investigation time by 13 hrs/week.",
+            "Built attribution logic using Node2Vec on account-level subgraphs to surface abuse cohorts and enrich alerts.",
+          ],
+        },
+      ],
     },
     {
-      title: "Graduate Research Assistant",
       company: "Laboratory for Auditory Neuroscience and Development",
       company_url: "https://sites.uw.edu/landlab/",
       logo_path: require("./assets/images/uwmedicine-neuro-logo.png"),
-      duration: "Dec 2024 – Present",
-      location: "Seattle, WA",
-      description: "",
-      descPoints: [
-        "Conducting research on Multivariate Temporal Response Function (mTRF) by processing EEG signals and leveraging NLP techniques to decode neural responses to stimuli.",
-        "Applied mTRF modeling on EEG data to examine cortical tracking of speech features in infants and adults, investigating bilingual advantages in third-language processing.",
+      subExperiences: [
+        {
+          title: "Graduate Research Assistant",
+          duration: "Dec 2024 – Present",
+          location: "Seattle, WA",
+          description: "",
+          descPoints: [
+            "Conducting research on Multivariate Temporal Response Function (mTRF) by processing EEG signals and leveraging NLP techniques to decode neural responses to stimuli.",
+            "Applied mTRF modeling on EEG data to examine cortical tracking of speech features in infants and adults, investigating bilingual advantages in third-language processing.",
+          ],
+        },
       ],
     },
     {
-      title: "Quantitative Research Associate",
       company: "JPMorgan Chase & Co.",
       company_url: "https://www.jpmorgan.com/global",
       logo_path: require("./assets/images/jpmc-logo-2.png"),
-      duration: "Jan 2024 – Aug 2024",
-      location: "Bengaluru, India",
-      description: "",
-      descPoints: [
-        "Revamped the Data Quality Program (DQP), reducing $150M in market risk capital by streamlining infrastructure.",
-        "Engineered an in-house anomaly detection system inspired by Isolation Forest, monitoring 150,000+ time series daily and pinpointing statistical anomalies.",
-        "Built a scalable, fault-tolerant, cross-vendor framework using ARIMA for time series forcasting, providing key insights on Average Daily Traded Volume to the firm's Credit Officers for trade approvals and liquidity add-on calculations.",
-        "Provided mentorship and facilitated seamless onboarding for new team members."
+      subExperiences: [
+        {
+          title: "Quantitative Research Associate",
+          duration: "Jan 2024 – Aug 2024",
+          location: "Bengaluru, India",
+          description: "",
+          descPoints: [
+            "Engineered an in-house anomaly detection system inspired by Isolation Forest, monitoring 150,000+ time series daily and pinpointing statistical anomalies.",
+            "Built a scalable, fault-tolerant, cross-vendor framework using ARIMA for time series forecasting, providing key insights on Average Daily Traded Volume to the firm's Credit Officers for trade approvals and liquidity add-on calculations.",
+            "Revamped the Data Quality Program (DQP), reducing $15M in market risk capital by streamlining infrastructure.",
+            "Provided mentorship and facilitated seamless onboarding for new team members.",
+          ],
+        },
+        {
+          title: "Quantitative Research Analyst",
+          duration: "Jul 2021 – Dec 2023",
+          location: "Mumbai, India",
+          description: "",
+          descPoints: [
+            "Collaborated with PhDs to implement advanced statistical models for regulatory reporting, boosting accuracy and cutting manual effort by 98%. Ensuring compliance with Fed and PRA standards.",
+            "Coordinated with cross-functional teams to optimize essential computational functions, resulting in a 57% reduction in downstream process runtime.",
+            "Leveraged DBSCAN clustering for anomaly detection, identifying high-risk trades and improving risk management.",
+            "Applied Quantile Regression and other advanced statistical techniques to enhance Value at Risk (VaR) calculations.",
+            "Built an event-driven architecture using AWS Lambda to automate data ingestion from multiple financial sources, reducing manual data processing by 80%.",
+            "Developed multi-threaded systems for real-time risk analysis using Python, improving processing efficiency by 60%.",
+            "Engineered scalable data storage on AWS S3, optimizing data retrieval times and reducing latency by 40%.",
+          ],
+        },
+        {
+          title: "Quantitative Research Intern",
+          duration: "Jan 2021 – Jun 2021",
+          location: "Mumbai, India",
+          description: "",
+          descPoints: [
+            "Automated time series monitoring using statistical models and Python saving 80% of manual effort across the team.",
+            "Developed internal web apps for data visualization with Python, TypeScript, and React, enhancing real-time monitoring and communication.",
+          ],
+        },
       ],
     },
     {
-      title: "Quantitative Research Analyst",
-      company: "JPMorgan Chase & Co.",
-      company_url: "https://www.jpmorgan.com/global",
-      logo_path: require("./assets/images/jpmc-logo-2.png"),
-      duration: "Jul 2021 – Jan 2024",
-      location: "Mumbai, India",
-      description: "",
-      descPoints: [
-        "Collaborated with PhDs to implement advanced statistical models for regulatory reporting, boosting accuracy and cutting manual effort by 98%. Ensuring compliance with Fed and PRA standards.",
-        "Coordinated with cross-functional teams to optimize essential computational functions, resulting in a 57% reduction in downstream process runtime.",
-        "Leveraged DBSCAN clustering for anomaly detection, identifying high-risk trades and improving risk management.",
-        "Applied Quantile Regression and other advanced statistical techniques to enhance Value at Risk (VaR) calculations.",
-        "Built an event-driven architecture using AWS Lambda to automate data ingestion from multiple financial sources, reducing manual data processing by 80%.",
-        "Developed multi-threaded systems for real-time risk analysis using Python, improving processing efficiency by 60%.",
-        "Engineered scalable data storage on AWS S3, optimizing data retrieval times and reducing latency by 40%."
-      ],
-    },
-    {
-      title: "Quantitative Research Intern",
-      company: "JPMorgan Chase & Co.",
-      company_url: "https://www.jpmorgan.com/global",
-      logo_path: require("./assets/images/jpmc-logo-2.png"),
-      duration: "Jan 2024 – Aug 2024",
-      location: "Mumbai, India",
-      description: "",
-      descPoints: [
-        "Automated time series monitoring using statistical models and Python saving 80% of manual effort across the team.",
-        "Developed internal web apps for data visualization with Python, TypeScript, and React, enhancing real-time monitoring and communication.",
-      ],
-    },
-    {
-      title: "Software Engineer Intern",
       company: "United Health Group (Optum)",
       company_url: "https://www.optum.com/en/about-us.html",
       logo_path: require("./assets/images/optum-logo.png"),
-      duration: "Jun 2020 – Jul 2020",
-      location: "Hyderabad, India",
-      description: "",
-      descPoints: [
-        "Utilized and compared multiple classification models, ranging from SVM to EfficientNet-B7 to classify skin lesions within dermatology images.",
-        "Applied U-Net CNN for medical image segmentation, improving diagnostics and treatment planning.",
+      subExperiences: [
+        {
+          title: "Software Engineer Intern",
+          duration: "Jun 2020 – Jul 2020",
+          location: "Hyderabad, India",
+          description: "",
+          descPoints: [
+            "Utilized and compared multiple classification models, ranging from SVM to EfficientNet-B7 to classify skin lesions within dermatology images.",
+            "Applied U-Net CNN for medical image segmentation, improving diagnostics and treatment planning.",
+          ],
+        },
       ],
     }
   ]
@@ -253,7 +287,7 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
@@ -262,6 +296,33 @@ const bigProjects = {
   title: "Projects",
   subtitle: "BUILDING COOL STUFF WHEN NO ONE'S WATCHING!",
   projects: [
+    {
+      projectName:
+        "Neural Encoding of Auditory-Linguistic Features via EEG Modeling",
+      projectDesc: [
+        "Developed EEG modeling pipeline combining linguistic annotations with auditory features to study neural encoding.",
+        "Analyzed spatial EEG activations to extract population-level neural response patterns.",
+        "Work contributed to a neuroscience conference manuscript.",
+      ],
+      footerLink: [
+        { name: "mTRF Modeling", url: "" },
+        { name: "Python", url: "" },
+      ],
+      gitUrl: "#", // Add link if available
+    },
+    {
+      projectName: "MICCAI Unicorn Challenge",
+      projectDesc: [
+        "Fine-tuned multi-modal LLMs (MedImageInsight, UltraMed) and transformers (LLaMA, RoBERTa), applying cross-modal learning with efficient transformer backbones for 20 pathology and radiology tasks under compute limits.",
+        "Worked as Research Assistant at KurtLab (UW Medicine) and achieved 5% improvement over baseline.",
+      ],
+      footerLink: [
+        { name: "LLMs", url: "" },
+        { name: "Transformers", url: "" },
+        { name: "Python", url: "" },
+      ],
+      gitUrl: "https://github.com/KurtLabUW/unicorn_2025_kurtlab",
+    },
     {
       projectName: "MRI to PET Image Synthesis",
       projectDesc: [
@@ -280,7 +341,7 @@ const bigProjects = {
       projectDesc: [
         "This project won first prize in the annual Data Science Hackathon 2025.",
         "The goal was to build an recommendation system for the Greater Seattle Area.",
-        "Applied optimization techniques and collaborative filtering to suggest top-rated apartments based on multiple factors."
+        "Applied optimization techniques and collaborative filtering to suggest top-rated apartments based on multiple factors.",
       ],
       footerLink: [
         { name: "Python", url: "" },
@@ -288,7 +349,7 @@ const bigProjects = {
         { name: "Optimization Techniques", url: "" },
         { name: "RecSys", url: "" },
       ],
-      gitUrl: "https://github.com/ridswnt10/ds_hackathon_2025"
+      gitUrl: "https://github.com/ridswnt10/ds_hackathon_2025",
     },
     {
       projectName: "Centralized Intelligent Surveillance System",
@@ -301,7 +362,7 @@ const bigProjects = {
         { name: "OpenCV", url: "" },
         { name: "Tensorflow", url: "" },
       ],
-      gitUrl: "#"
+      gitUrl: "#",
     },
     {
       projectName: "Sketch To Website",
@@ -315,7 +376,7 @@ const bigProjects = {
         { name: "HTML", url: "" },
         { name: "CSS", url: "" },
       ],
-      gitUrl: "#"
+      gitUrl: "#",
     },
     {
       projectName: "Real-Time Heart Rate Measurement from Smart Phone Camera",
@@ -327,26 +388,26 @@ const bigProjects = {
         { name: "Python", url: "" },
         { name: "OpenCV", url: "" },
       ],
-      gitUrl: "#"
+      gitUrl: "#",
     },
-    {
-      projectName: "assignMENTOR",
-      projectDesc:[
-        "Write all alphabets in your own handwriting on a canvas, which will be converted into a TrueType font (.ttf).",
-        "The text will be scanned using OCR and transformed into your personalized font.",
-        emoji("Perfect tool to complete all your assignments quickly ☺️"),
-      ],
-      footerLink: [
-        { name: "Python", url: "" },
-        { name: "OpenCV", url: "" },
-        { name: "JavaScript", url: "" },
-        { name: "ReactJs", url: "" },
-        { name: "Paper.js", url: "" },
-        { name: "HTML", url: "" },
-        { name: "CSS", url: "" },
-      ],
-      gitUrl: "#"
-    },
+    // {
+    //   projectName: "assignMENTOR",
+    //   projectDesc: [
+    //     "Write all alphabets in your own handwriting on a canvas, which will be converted into a TrueType font (.ttf).",
+    //     "The text will be scanned using OCR and transformed into your personalized font.",
+    //     emoji("Perfect tool to complete all your assignments quickly ☺️"),
+    //   ],
+    //   footerLink: [
+    //     { name: "Python", url: "" },
+    //     { name: "OpenCV", url: "" },
+    //     { name: "JavaScript", url: "" },
+    //     { name: "ReactJs", url: "" },
+    //     { name: "Paper.js", url: "" },
+    //     { name: "HTML", url: "" },
+    //     { name: "CSS", url: "" },
+    //   ],
+    //   gitUrl: "#",
+    // },
     // {
     //   projectName: "Voting Database Management",
     //   projectDesc: [
@@ -362,7 +423,7 @@ const bigProjects = {
     //   gitUrl: "#",
     // },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -382,12 +443,12 @@ const achievementSection = {
       footerLink: [
         {
           name: "",
-          url: ""
-        }
-      ]
+          url: "",
+        },
+      ],
     },
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -400,20 +461,21 @@ const blogSection = {
     {
       url: "https://drive.google.com/file/d/1vbjFvJef4i-Dy2fhmaysutk__Hr02i5P/view",
       title: "Graph Neural Networks in Recommender Systems",
-      description: "Review Article - 2024"
+      description: "Review Article - 2024",
     },
     {
       url: "https://www.taylorfrancis.com/reader/read-online/f6a2f379-59f0-440e-8320-f363ed7863aa/chapter/pdf?context=ubx",
-      title: "A comprehensive analysis of driver drowsiness detection techniques",
-      description: "Taylor & Francis - ADSSS 2023"
+      title:
+        "A comprehensive analysis of driver drowsiness detection techniques",
+      description: "Taylor & Francis - ADSSS 2023",
     },
     {
       url: "https://drive.google.com/file/d/1f9H4vDPRzGeuC6w-EaKFMuBuLjUgc3hs/view",
       title: "Centralized Intelligent Surveillance System",
-      description: "Bachelor's Thesis - 2021"
+      description: "Bachelor's Thesis - 2021",
     },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -421,17 +483,17 @@ const blogSection = {
 const talkSection = {
   title: "TALKS",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅",
   ),
   talks: [
     {
       title: "",
       subtitle: "",
       slides_url: "",
-      event_url: ""
-    }
+      event_url: "",
+    },
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -442,21 +504,21 @@ const podcastSection = {
 
   // Please Provide with Your Podcast embeded Link
   podcast: [],
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Have a job? Discuss a project? or just want to say hi? My Inbox is open for all!",
-  email_address: "achopra0106@gmail.com"
+  email_address: "achopra0106@gmail.com",
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  display: false, // Set true to display this section, defaults to false
 };
 
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
