@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./ExperienceCard.scss";
 
 export default function ExperienceCard({ workExperiences, isDark }) {
@@ -6,45 +7,32 @@ export default function ExperienceCard({ workExperiences, isDark }) {
   const GetDescBullets = ({ descBullets, isDark }) => {
     return descBullets
       ? descBullets.map((item, i) => (
-          <li
-            key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-          >
-            {item}
-          </li>
-        ))
+        <li
+          key={i}
+          className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+        >
+          {item}
+        </li>
+      ))
       : null;
   };
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          entry.target.classList.remove('not-in-view');
-        } else {
-          entry.target.classList.remove('in-view');
-          entry.target.classList.add('not-in-view');
-        }
-      });
-    },
-    {
-      rootMargin: '0px',
-      threshold: [0, 0.1, 1],
-    }
-  );
-
-  const tags = document.querySelectorAll('.timeline-item');
-  tags.forEach(tag => {
-    observer.observe(tag);
-  });
 
   return (
     <div className="timeline">
       {workExperiences.map((cardInfo, index) => (
         <div key={index} className="timeline-item">
           <span className="timeline-bullet"></span>
-          <div className={isDark ? "experience-card-dark" : "experience-card"}>
+          <motion.div
+            className={isDark ? "experience-card-dark" : "experience-card"}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2, margin: "-50px" }}
+            transition={{
+              duration: 0.9,
+              delay: index * 0.13,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
+          >
             <div className="experience-banner">
               <div className="experience-blurred_div"></div>
               <a href={cardInfo.company_url} target="_blank" rel="noreferrer">
@@ -56,7 +44,8 @@ export default function ExperienceCard({ workExperiences, isDark }) {
                     backgroundPosition: 'left',
                     backgroundRepeat: 'no-repeat',
                     height: '100%',
-                    width: '30%'}}
+                    width: '30%'
+                  }}
                 >
                 </div>
               </a>
@@ -64,8 +53,8 @@ export default function ExperienceCard({ workExperiences, isDark }) {
             <div className="experience-text-details">
               {cardInfo.subExperiences ? (
                 cardInfo.subExperiences.map((subExp, i) => (
-                  <div key={i} className="sub-experience-section" style={{marginBottom: i < cardInfo.subExperiences.length - 1 ? '20px' : '0'}}>
-                     <div className="experience-text-title">
+                  <div key={i} className="sub-experience-section" style={{ marginBottom: i < cardInfo.subExperiences.length - 1 ? '20px' : '0' }}>
+                    <div className="experience-text-title">
                       <h4
                         className={
                           isDark
@@ -155,7 +144,7 @@ export default function ExperienceCard({ workExperiences, isDark }) {
                 </>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       ))}
     </div>

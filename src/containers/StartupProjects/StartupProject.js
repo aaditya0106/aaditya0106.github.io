@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
-import {Fade} from "react-reveal";
+import {Fade} from "../../components/animations";
 import StyleContext from "../../contexts/StyleContext";
 import Button from "../../components/button/Button";
 
