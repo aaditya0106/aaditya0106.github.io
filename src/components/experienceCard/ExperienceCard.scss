@@ -8,16 +8,32 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; // Align to the left
+  align-items: flex-start;
+  
+  // Continuous vertical line
+  &::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #007bff;
+  }
 }
 
 // Each timeline item (a card)
 .timeline-item {
-  display: flex; // Use flex to align bullet and card horizontally
-  align-items: center; // Vertically center bullet and card
+  display: flex;
+  align-items: flex-start;
   margin-bottom: 40px;
   width: 100%;
   position: relative;
+  
+  // Remove individual item lines since we have continuous line now
+  &::before {
+    content: none;
+  }
 }
 
 // Bullet point for each card
@@ -26,18 +42,12 @@
   height: 20px;
   background-color: #007bff;
   border-radius: 50%;
-  margin-right: 20px; // Add some space between the bullet and card
-}
-
-// Connector between bullet points
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: 9px; // Adjust based on bullet width
-  top: 20px;
-  width: 2px;
-  height: 100%;//calc(100% - 20px);
-  background-color: #007bff;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #007bff;
 }
 
 @keyframes fade {
@@ -120,7 +130,15 @@
 }
 
 .experience-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: $lightBoxShadowDark 0px 20px 40px -10px;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.experience-card-dark:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 20px 40px -10px;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
 }
 
 .experience-div-company {
